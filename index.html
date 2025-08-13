@@ -1,11 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chinmay C Deshmukh — Data Science Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Chinmay C Deshmukh — Data Science & Machine Learning portfolio. Projects: House Price Prediction, Diabetes Risk Analysis, GenAI Career Roadmap. Skills in Python, SQL, NumPy, Pandas, Matplotlib, Seaborn, scikit-learn, Flask." />
+  <meta name="keywords" content="Data Science, Machine Learning, Artificial Intelligence, Deep Learning, Python, SQL, scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, Flask, Jupyter, Regression, Classification, Random Forest, Logistic Regression, NLP, Generative AI, LLM, Feature Engineering, Model Evaluation, Cross-Validation, Hyperparameter Tuning, EDA, Data Visualization, ETL, APIs" />
+  <meta name="author" content="Chinmay C Deshmukh" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chinmay C Deshmukh — Data Science Portfolio" />
+  <meta property="og:description" content="Projects in ML/AI, GenAI, and analytics. Open to Data Science, ML Engineer, and AI roles." />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Internal CSS -->
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #111833;
+      --text: #eaf0ff;
+      --muted: #98a2b3;
+      --accent: #7c5cff;
+      --accent-2: #22d3ee;
+      --border: #1d2547;
+      --chip: #1a2140;
+    }
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #6d28d9;
+      --accent-2: #06b6d4;
+      --border: #e2e8f0;
+      --chip: #f1f5f9;
+    }
+
+    html, body { height: 100%; }
+    body {
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 120% 10%, rgba(34,211,238,.15), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container-narrow { max-width: 1100px; }
+    .nav-blur { backdrop-filter: saturate(180%) blur(12px); background: color-mix(in oklab, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
+    .brand {
+      font-weight: 800; letter-spacing: .2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .tag { background: var(--chip); color: var(--text); border: 1px solid var(--border); padding: .25rem .6rem; border-radius: 999px; font-size: .85rem; }
+    .cardx { background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 8px 30px rgba(2,6,23,.25); }
+    .section-title { font-weight: 800; letter-spacing: .3px; }
+    .muted { color: var(--muted); }
+    .btn-ghost { border: 1px solid var(--border); background: var(--chip); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--accent-2); }
+    .btn-primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); border: 0; }
+    .avatar { width: 120px; height: 120px; border-radius: 999px; border: 2px solid var(--border); background: #0b102000 url('') center/cover no-repeat; }
+    .grid-auto { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; }
+    .col-span-4 { grid-column: span 4; }
+    .col-span-8 { grid-column: span 8; }
+    @media (max-width: 992px) { .col-span-4, .col-span-8 { grid-column: span 12; } }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: var(--chip); border:1px solid var(--border); padding:.1rem .35rem; border-radius: .35rem; }
+    .link-box { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .7rem; border:1px dashed var(--border); border-radius: .75rem; }
+    .divider { height: 1px; background: var(--border); }
+    .tick::before { content: "✔"; margin-right:.5rem; }
+    .resume-plain { white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: .95rem; background: var(--card); border:1px solid var(--border); border-radius: 12px; padding: 1rem; display:none; }
+    .pill { border:1px solid var(--border); background: var(--chip); border-radius: 999px; padding: .35rem .7rem; font-size: .85rem; }
+
+    .link-box {
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.4rem .7rem;
+      border:2px solid var(--accent-2);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #fff !important;
+      font-weight: 600;
+      border-radius: .75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .link-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,.4);
+      text-decoration: none;
+      color: #fff !important;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      border: 2px solid var(--border);
+      background: #0b1020 url('Profile.png') center/cover no-repeat;
+    }
+  </style>
 </head>
 <body>
-<h1>Chinmay's PortFolio</h1>
+  <!-- Top Nav -->
+  <nav class="navbar navbar-expand-lg sticky-top nav-blur">
+    <div class="container container-narrow py-2">
+      <a class="navbar-brand brand" href="#top">Chinmay C Deshmukh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certs">Certificates</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 ms-lg-3">
+          <button id="themeBtn" class="btn btn-ghost btn-sm" type="button" title="Toggle theme">🌓</button>
+          <button id="plainBtn" class="btn btn-ghost btn-sm" type="button" title="ATS Plain Text">Plain Text</button>
+          <button id="printBtn" class="btn btn-primary btn-sm" type="button" title="Print / Save PDF">Download</button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Header -->
+  <header id="top" class="py-5">
+    <div class="container container-narrow">
+      <div class="grid-auto align-items-center">
+        <div class="col-span-8">
+          <h1 class="display-5 fw-bold">Data Science • Machine Learning • AI</h1>
+          <p class="muted mb-3">Early-career Data Scientist passionate about building ML solutions that turn messy, real-world data into business impact. Skilled in <strong>Python</strong>, <strong>SQL</strong>, <strong>EDA</strong>, <strong>feature engineering</strong>, <strong>modeling</strong>, and <strong>visualization</strong>. Open to roles in Data Science, ML Engineering, and AI.</p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="pill">Parbhani, India</span>
+            <a class="pill" href="tel:+917756052203">📞 +91 77560 52203</a>
+            <a class="pill" href="mailto:ccdeshmukh28@gmail.com">✉️ ccdeshmukh28@gmail.com</a>
+            <a class="pill" href="https://www.linkedin.com/in/chinmay-deshmukh-7a2633264/" target="_blank" rel="noopener">in/LinkedIn</a>
+            <a class="pill" href="https://github.com/chinmay2203" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#projects">View Projects</a>
+            <a class="btn btn-ghost btn-lg" href="#skills">Explore Skills</a>
+          </div>
+        </div>
+        <div class="col-span-4 text-center">
+          <!-- Replace the background-image URL or use <img> if preferred -->
+          <div class="avatar mx-auto mb-3" id="avatar" title=""></div>
+          <!-- <small class="muted d-block">Click to upload your profile photo</small> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-5">
+    <!-- About -->
+    <section id="about" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <h2 class="section-title h3 mb-3">About</h2>
+        <p>Motivated and adaptable fresher with strong core programming skills and a growth mindset. I communicate effectively, collaborate well with teams, and learn fast. My focus is on <strong>ML/AI</strong> workflows end‑to‑end: <em>data collection → cleaning → EDA → feature engineering → model training → evaluation → deployment (Flask)</em>.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag">Supervised Learning</span>
+          <span class="tag">Regression & Classification</span>
+          <span class="tag">Model Interpretability</span>
+          <span class="tag">Cross‑Validation</span>
+          <span class="tag">Hyperparameter Tuning</span>
+          <span class="tag">NLP & GenAI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <h2 class="section-title h3 mb-3">Skills, Tools & Technologies</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Languages</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">Python</span>
+              <span class="tag">SQL (MySQL)</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Libraries / Frameworks</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">NumPy</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+              <span class="tag">scikit‑learn</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Plotly</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Platforms & Tools</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">Jupyter Notebook</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Git & GitHub</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">ML/AI Keywords</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">EDA</span>
+              <span class="tag">Feature Engineering</span>
+              <span class="tag">Normalization</span>
+              <span class="tag">Encoding</span>
+              <span class="tag">Outlier Handling</span>
+              <span class="tag">Linear Regression</span>
+              <span class="tag">Random Forest</span>
+              <span class="tag">Logistic Regression</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Content‑based Recommendation</span>
+              <span class="tag">Generative AI (GPT)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="section-title h3 mb-0">Highlighted Projects</h2>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/chinmay2203" target="_blank" rel="noopener">More on GitHub →</a>
+        </div>
+
+        <div class="row g-3">
+          <!-- Project 1 -->
+          <div class="col-md-6">
+            <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5">House Price Prediction (ML)</h3>
+                <a class="link-box" href="https://ccdeshmukh28.pythonanywhere.com/" target="_blank" rel="noopener" aria-label="Live Demo">Live ↗</a>
+              </div>
+              <ul class="mt-2 mb-0">
+                <li>Processed & analyzed <strong>50,000+</strong> property records to identify key drivers (location, size, amenities).</li>
+                <li>Built regression models with <strong>90%+ accuracy</strong> for informed property valuation.</li>
+                <li>Interactive visualizations via <strong>Matplotlib</strong> & <strong>Seaborn</strong> to interpret market trends.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit‑learn</span><span class="tag">EDA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6">
+            <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5">Diabetes Risk Analysis (ML)</h3>
+                <a class="link-box" href="https://cdeshmukh806.pythonanywhere.com/" target="_blank" rel="noopener">Live ↗</a>
+              </div>
+              <ul class="mt-2 mb-0">
+                <li>Analyzed <strong>5,000+</strong> health records; identified risk factors (glucose, BMI, age).</li>
+                <li>Improved early detection strategies by <strong>18%</strong> using classification models.</li>
+                <li>Delivered clinician‑friendly dashboards with distribution & trend insights.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="tag">Logistic Regression</span><span class="tag">Visualization</span><span class="tag">Pandas</span><span class="tag">Seaborn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6">
+            <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5">Career Roadmap Generation (GenAI)</h3>
+                <a class="link-box" href="https://chinmaydeshmukh619.pythonanywhere.com/" target="_blank" rel="noopener">Live ↗</a>
+              </div>
+              <ul class="mt-2 mb-0">
+                <li>AI system generating personalized multi‑year career plans from skills & interests.</li>
+                <li>Used <strong>NLP</strong> & <strong>content‑based recommendation</strong> with market trend signals.</li>
+                <li>Interactive charts with <strong>Matplotlib</strong> & <strong>Plotly</strong> for skill gap insights.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="tag">Generative AI (GPT)</span><span class="tag">NLP</span><span class="tag">Flask</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <h2 class="section-title h3 mb-3">Experience</h2>
+        <div class="d-flex justify-content-between flex-wrap">
+          <div>
+            <h3 class="h6 mb-1">Data Science Intern — Anyatam Adhyayan Education Services Pvt. Ltd</h3>
+            <div class="muted">Mar 2025 – Aug 2025</div>
+          </div>
+        </div>
+        <ul class="mt-2 mb-0">
+          <li class="tick">Analyzed real datasets using <strong>Pandas</strong> & <strong>Matplotlib</strong>; improved model interpretability by <strong>25%</strong>.</li>
+          <li class="tick">Cleaned & prepared data pipelines; reduced data errors by ~<strong>30%</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <h2 class="section-title h3 mb-3">Education</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <h3 class="h6 mb-1">B.Tech in Artificial Intelligence & Data Science</h3>
+            <div class="muted">TERNA College of Engineering, Dharashiv (Dr. Babasaheb Ambedkar Technological University) — 2022–2025</div>
+            <div>CGPA: 7.89</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 mb-1">Diploma in Mechanical Engineering</h3>
+            <div class="muted">Government Polytechnic Jintur (MSBTE) — 2019–2022</div>
+            <div>Percentage: 75</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 mb-1">SSC (10th)</h3>
+            <div class="muted">Bhartiya Bal Vidya Mandir, Parbhani (Aurangabad) — 2018</div>
+            <div>Percentage: 74.80</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certs" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <h2 class="section-title h3 mb-3">Certificates</h2>
+        <ul class="mb-0">
+          <li><strong>Data Analysis with Python</strong> — IBM Cognitive Class, Jun 2025.</li>
+          <li><strong>Cisco CCNAv7</strong> — May 2024.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container container-narrow mb-4">
+      <div class="cardx p-4">
+        <h2 class="section-title h3 mb-3">Contact</h2>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <a class="btn btn-primary" href="mailto:ccdeshmukh28@gmail.com">Email Me</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/chinmay-deshmukh-7a2633264/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/chinmay2203" target="_blank" rel="noopener">GitHub</a>
+          <button id="copyEmail" class="btn btn-ghost" type="button"><span class="me-1">Copy</span><kbd class="kbd">Email</kbd></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATS Plain Text (toggle) -->
+    <section class="container container-narrow">
+      <div class="resume-plain" id="plain">
+Chinmay C Deshmukh | Data Science / Machine Learning | Parbhani, India | +91 77560 52203 | ccdeshmukh28@gmail.com
+LinkedIn: https://www.linkedin.com/in/chinmay-deshmukh-7a2633264/ | GitHub: https://github.com/chinmay2203
+
+SUMMARY
+Motivated and adaptable fresher with strong core programming skills. Seeking a Data Science/ML role. Good communicator and team player. Skilled in Python, SQL, EDA, feature engineering, modeling, and visualization.
+
+SKILLS
+Languages: Python; SQL (MySQL); HTML; CSS; JavaScript
+Libraries: NumPy; Pandas; Matplotlib; Seaborn; scikit-learn; Flask; Plotly
+Tools: Jupyter Notebook; VS Code; Excel; Git & GitHub
+ML/AI: EDA; feature engineering; missing values; outlier handling; normalization; encoding; regression (Linear, Random Forest); classification (Logistic Regression); NLP; content-based recommendation; Generative AI (GPT)
+
+PROJECTS
+House Price Prediction (https://ccdeshmukh28.pythonanywhere.com/)
+• 50,000+ records processed; identified key price drivers (location, size, amenities)
+• Regression models achieving 90%+ accuracy
+• Visualizations using Matplotlib & Seaborn
+
+Diabetes Risk Analysis (https://cdeshmukh806.pythonanywhere.com/)
+• 5,000+ patient records analyzed; key risk factors: glucose, BMI, age
+• Early detection strategies improved by 18%
+• Visualizations for risk distribution & trends
+
+Career Roadmap Generation (https://chinmaydeshmukh619.pythonanywhere.com/)
+• GenAI system to create multi‑year career plans
+• NLP & content‑based recommendation with market trend signals
+• Visualizations with Matplotlib & Plotly
+
+EXPERIENCE
+Data Science Intern — Anyatam Adhyayan Education Services Pvt. Ltd (Mar 2025 – Aug 2025)
+• Improved model interpretability by 25% using Pandas & Matplotlib
+• Reduced data errors by ~30% through robust cleaning & prep
+
+EDUCATION
+B.Tech in Artificial Intelligence & Data Science — TERNA College of Engineering, Dharashiv (DBATU), 2022–2025 | CGPA: 7.89
+Diploma in Mechanical Engineering — Government Polytechnic Jintur (MSBTE), 2019–2022 | 75%
+SSC (10th) — Bhartiya Bal Vidya Mandir, Parbhani (Aurangabad), 2018 | 74.80%
+
+CERTIFICATES
+• Data Analysis with Python — IBM Cognitive Class (Jun 2025)
+• Cisco CCNAv7 — May 2024
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container container-narrow d-flex flex-wrap justify-content-between align-items-center">
+      <small class="muted">© <span id="year"></span> Chinmay C Deshmukh. All rights reserved.</small>
+      <div class="d-flex gap-2">
+        <a href="#top" class="pill">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Internal JS -->
+  <script>
+    // Theme toggle (persist in localStorage)
+    (function() {
+      const key = 'theme';
+      const html = document.documentElement;
+      const saved = localStorage.getItem(key);
+      if (saved) html.setAttribute('data-theme', saved);
+      document.getElementById('themeBtn').addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        if (next === 'dark') html.removeAttribute('data-theme'); else html.setAttribute('data-theme', 'light');
+        localStorage.setItem(key, next);
+      });
+    })();
+
+    // Print / Save as PDF
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+    // Plain text toggle for ATS copy/paste
+    document.getElementById('plainBtn').addEventListener('click', () => {
+      const el = document.getElementById('plain');
+      el.style.display = (el.style.display === 'none' || !el.style.display) ? 'block' : 'none';
+      if (el.style.display === 'block') el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // Copy email
+    document.getElementById('copyEmail').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('ccdeshmukh28@gmail.com');
+        const btn = document.getElementById('copyEmail');
+        const original = btn.innerHTML;
+        btn.innerHTML = 'Copied!';
+        setTimeout(() => (btn.innerHTML = original), 1200);
+      } catch (e) { alert('Copy failed'); }
+    });
+
+    // Avatar upload (placeholder -> upload to background-image)
+    document.getElementById('avatar22').addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = () => {
+        const file = input.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          document.getElementById('avatar').style.backgroundImage = `url('${e.target.result}')`;
+        };
+        reader.readAsDataURL(file);
+      };
+      input.click();
+    });
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
