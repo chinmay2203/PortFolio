@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chinmay C Deshmukh — Data Science Portfolio</title>
+  <title>Chinmay Deshmukh — Data Science & AI Portfolio</title>
 
   <!-- SEO -->
-  <meta name="description" content="Chinmay C Deshmukh — Data Science & Machine Learning portfolio. Projects: House Price Prediction, Diabetes Risk Analysis, GenAI Career Roadmap. Skills in Python, SQL, NumPy, Pandas, Matplotlib, Seaborn, scikit-learn, Flask." />
-  <meta name="keywords" content="Data Science, Machine Learning, Artificial Intelligence, Deep Learning, Python, SQL, scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, Flask, Jupyter, Regression, Classification, Random Forest, Logistic Regression, NLP, Generative AI, LLM, Feature Engineering, Model Evaluation, Cross-Validation, Hyperparameter Tuning, EDA, Data Visualization, ETL, APIs" />
-  <meta name="author" content="Chinmay C Deshmukh" />
+  <meta name="description" content="Chinmay Deshmukh — Data Science, Machine Learning, Generative AI, analytics, and dashboard portfolio." />
+  <meta name="keywords" content="Data Science, Machine Learning, Python, SQL, TensorFlow, CNN, OpenCV, NLP, LLM, RAG, LangChain, FAISS, Power BI, Excel, Data Analytics" />
+  <meta name="author" content="Chinmay Deshmukh" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Chinmay C Deshmukh — Data Science Portfolio" />
-  <meta property="og:description" content="Projects in ML/AI, GenAI, and analytics. Open to Data Science, ML Engineer, and AI roles." />
+  <meta property="og:title" content="Chinmay Deshmukh — Data Science & AI Portfolio" />
+  <meta property="og:description" content="Data Science, Machine Learning, Generative AI, analytics, and dashboard projects." />
   <meta property="og:type" content="website" />
 
   <!-- Bootstrap 5 -->
@@ -102,7 +102,27 @@
       height: 120px;
       border-radius: 999px;
       border: 2px solid var(--border);
-      background: #0b1020 url('Profile.png') center/cover no-repeat;
+      background-color: #0b1020;
+      background-image: url('../Profile%20Photo%201.jpeg'), url('Profile.png');
+      background-position: center, center;
+      background-size: cover, cover;
+      background-repeat: no-repeat, no-repeat;
+    }
+    @media print {
+      body * { visibility: hidden !important; }
+      #plain, #plain * { visibility: visible !important; }
+      #plain {
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        color: #111;
+        background: #fff;
+        border: 0;
+        font: 10pt/1.45 Arial, sans-serif;
+        white-space: pre-wrap;
+      }
+      @page { margin: 18mm; }
     }
   </style>
 </head>
@@ -110,7 +130,7 @@
   <!-- Top Nav -->
   <nav class="navbar navbar-expand-lg sticky-top nav-blur">
     <div class="container container-narrow py-2">
-      <a class="navbar-brand brand" href="#top">Chinmay C Deshmukh</a>
+          <a class="navbar-brand brand" href="#top">Chinmay Deshmukh</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -119,14 +139,16 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="#certs">Certificates</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 ms-lg-3">
           <button id="themeBtn" class="btn btn-ghost btn-sm" type="button" title="Toggle theme">🌓</button>
           <button id="plainBtn" class="btn btn-ghost btn-sm" type="button" title="ATS Plain Text">Plain Text</button>
-          <button id="printBtn" class="btn btn-primary btn-sm" type="button" title="Print / Save PDF">Download</button>
+          <button id="printBtn" class="btn btn-primary btn-sm" type="button" title="Print / Save resume as PDF">Save PDF</button>
         </div>
       </div>
     </div>
@@ -137,18 +159,20 @@
     <div class="container container-narrow">
       <div class="grid-auto align-items-center">
         <div class="col-span-8">
-          <h1 class="display-5 fw-bold">Data Science • Machine Learning • AI</h1>
-          <p class="muted mb-3">Early-career Data Scientist passionate about building ML solutions that turn messy, real-world data into business impact. Skilled in <strong>Python</strong>, <strong>SQL</strong>, <strong>EDA</strong>, <strong>feature engineering</strong>, <strong>modeling</strong>, and <strong>visualization</strong>. Open to roles in Data Science, ML Engineering, and AI.</p>
+          <h1 class="display-5 fw-bold">Chinmay Deshmukh</h1>
+          <p class="h4 mb-3">Data Science • Machine Learning • Generative AI</p>
+          <p class="muted mb-3">Motivated and adaptable fresher with strong programming skills in Python, SQL, and Data Science libraries. Passionate about learning and growth, with proven ability to analyze datasets, build ML models, and create data-driven insights. A quick learner, effective communicator, and team player seeking opportunities to apply technical expertise in real-world projects.</p>
           <div class="d-flex flex-wrap gap-2 mb-3">
-            <span class="pill">Parbhani, India</span>
-            <a class="pill" href="tel:+917756052203">📞 +91 77560 52203</a>
+            <span class="pill">Pune, India</span>
+            <a class="pill" href="tel:+917756052203">📞 +91 7756052203</a>
             <a class="pill" href="mailto:ccdeshmukh28@gmail.com">✉️ ccdeshmukh28@gmail.com</a>
-            <a class="pill" href="https://www.linkedin.com/in/chinmay-deshmukh-7a2633264/" target="_blank" rel="noopener">in/LinkedIn</a>
+            <a class="pill" href="https://linkedin.com/in/chinmay-deshmukh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="pill" href="https://github.com/chinmay2203" target="_blank" rel="noopener">GitHub</a>
           </div>
           <div class="d-flex flex-wrap gap-2">
             <a class="btn btn-primary btn-lg" href="#projects">View Projects</a>
             <a class="btn btn-ghost btn-lg" href="#skills">Explore Skills</a>
+            <a class="btn btn-ghost btn-lg" href="resume.txt" download>Download Resume (TXT)</a>
           </div>
         </div>
         <div class="col-span-4 text-center">
@@ -165,15 +189,7 @@
     <section id="about" class="container container-narrow mb-4">
       <div class="cardx p-4">
         <h2 class="section-title h3 mb-3">About</h2>
-        <p>Motivated and adaptable fresher with strong core programming skills and a growth mindset. I communicate effectively, collaborate well with teams, and learn fast. My focus is on <strong>ML/AI</strong> workflows end‑to‑end: <em>data collection → cleaning → EDA → feature engineering → model training → evaluation → deployment (Flask)</em>.</p>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="tag">Supervised Learning</span>
-          <span class="tag">Regression & Classification</span>
-          <span class="tag">Model Interpretability</span>
-          <span class="tag">Cross‑Validation</span>
-          <span class="tag">Hyperparameter Tuning</span>
-          <span class="tag">NLP & GenAI</span>
-        </div>
+        <p>Motivated and adaptable fresher with strong programming skills in Python, SQL, and Data Science libraries. Passionate about learning and growth, with proven ability to analyze datasets, build ML models, and create data-driven insights. A quick learner, effective communicator, and team player seeking opportunities to apply technical expertise in real-world projects.</p>
       </div>
     </section>
 
@@ -183,50 +199,64 @@
         <h2 class="section-title h3 mb-3">Skills, Tools & Technologies</h2>
         <div class="row g-3">
           <div class="col-md-6">
-            <h3 class="h6 text-uppercase text-muted">Languages</h3>
+            <h3 class="h6 text-uppercase text-muted">Programming</h3>
             <div class="d-flex flex-wrap gap-2">
               <span class="tag">Python</span>
-              <span class="tag">SQL (MySQL)</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">SQL</span>
             </div>
           </div>
           <div class="col-md-6">
-            <h3 class="h6 text-uppercase text-muted">Libraries / Frameworks</h3>
+            <h3 class="h6 text-uppercase text-muted">AI/ML Libraries</h3>
             <div class="d-flex flex-wrap gap-2">
               <span class="tag">NumPy</span>
               <span class="tag">Pandas</span>
               <span class="tag">Matplotlib</span>
               <span class="tag">Seaborn</span>
-              <span class="tag">scikit‑learn</span>
-              <span class="tag">Flask</span>
-              <span class="tag">Plotly</span>
+              <span class="tag">Scikit-learn</span>
             </div>
           </div>
           <div class="col-md-6">
-            <h3 class="h6 text-uppercase text-muted">Platforms & Tools</h3>
+            <h3 class="h6 text-uppercase text-muted">Deep Learning & Computer Vision</h3>
             <div class="d-flex flex-wrap gap-2">
+              <span class="tag">TensorFlow</span>
+              <span class="tag">CNN</span>
+              <span class="tag">OpenCV</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Generative AI & NLP</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">NLP</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Generative AI</span>
+              <span class="tag">RAG</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">OpenAI Embeddings</span>
+              <span class="tag">Vector Databases</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Frameworks</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">Flask</span>
+              <span class="tag">Django</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Databases</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h6 text-uppercase text-muted">Developer Tools</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
               <span class="tag">Jupyter Notebook</span>
               <span class="tag">VS Code</span>
-              <span class="tag">Excel</span>
-              <span class="tag">Git & GitHub</span>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h3 class="h6 text-uppercase text-muted">ML/AI Keywords</h3>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="tag">EDA</span>
-              <span class="tag">Feature Engineering</span>
-              <span class="tag">Normalization</span>
-              <span class="tag">Encoding</span>
-              <span class="tag">Outlier Handling</span>
-              <span class="tag">Linear Regression</span>
-              <span class="tag">Random Forest</span>
-              <span class="tag">Logistic Regression</span>
-              <span class="tag">NLP</span>
-              <span class="tag">Content‑based Recommendation</span>
-              <span class="tag">Generative AI (GPT)</span>
+              <span class="tag">PyCharm</span>
             </div>
           </div>
         </div>
@@ -246,13 +276,13 @@
           <div class="col-md-6">
             <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
               <div class="d-flex justify-content-between align-items-start">
-                <h3 class="h5">House Price Prediction (ML)</h3>
+                <h3 class="h5">House Price Prediction Using Machine Learning</h3>
                 <a class="link-box" href="https://ccdeshmukh28.pythonanywhere.com/" target="_blank" rel="noopener" aria-label="Live Demo">Live ↗</a>
               </div>
               <ul class="mt-2 mb-0">
                 <li>Processed & analyzed <strong>50,000+</strong> property records to identify key drivers (location, size, amenities).</li>
-                <li>Built regression models with <strong>90%+ accuracy</strong> for informed property valuation.</li>
-                <li>Interactive visualizations via <strong>Matplotlib</strong> & <strong>Seaborn</strong> to interpret market trends.</li>
+                <li>Built regression models with <strong>90% prediction accuracy</strong>.</li>
+                <li>Visualized market pricing trends and correlations using <strong>Matplotlib</strong> and <strong>Seaborn</strong>.</li>
               </ul>
               <div class="d-flex flex-wrap gap-2 mt-2">
                 <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit‑learn</span><span class="tag">EDA</span>
@@ -264,13 +294,12 @@
           <div class="col-md-6">
             <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
               <div class="d-flex justify-content-between align-items-start">
-                <h3 class="h5">Diabetes Risk Analysis (ML)</h3>
+                <h3 class="h5">Diabetes Risk Analysis Using Machine Learning</h3>
                 <a class="link-box" href="https://cdeshmukh806.pythonanywhere.com/" target="_blank" rel="noopener">Live ↗</a>
               </div>
               <ul class="mt-2 mb-0">
-                <li>Analyzed <strong>5,000+</strong> health records; identified risk factors (glucose, BMI, age).</li>
-                <li>Improved early detection strategies by <strong>18%</strong> using classification models.</li>
-                <li>Delivered clinician‑friendly dashboards with distribution & trend insights.</li>
+                <li>Analyzed <strong>5,000+</strong> patient health records to identify risk factors and patterns.</li>
+                <li>Built predictive models improving early diabetes detection by <strong>18%</strong>.</li>
               </ul>
               <div class="d-flex flex-wrap gap-2 mt-2">
                 <span class="tag">Logistic Regression</span><span class="tag">Visualization</span><span class="tag">Pandas</span><span class="tag">Seaborn</span>
@@ -282,20 +311,44 @@
           <div class="col-md-6">
             <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
               <div class="d-flex justify-content-between align-items-start">
-                <h3 class="h5">Career Roadmap Generation (GenAI)</h3>
+                <h3 class="h5">Career Roadmap Generation Using GenAI</h3>
                 <a class="link-box" href="https://chinmaydeshmukh619.pythonanywhere.com/" target="_blank" rel="noopener">Live ↗</a>
               </div>
               <ul class="mt-2 mb-0">
-                <li>AI system generating personalized multi‑year career plans from skills & interests.</li>
-                <li>Used <strong>NLP</strong> & <strong>content‑based recommendation</strong> with market trend signals.</li>
-                <li>Interactive charts with <strong>Matplotlib</strong> & <strong>Plotly</strong> for skill gap insights.</li>
+                <li>Built an AI-powered recommendation system that creates personalized career plans.</li>
+                <li>Used <strong>Generative AI</strong> and <strong>NLP</strong> to generate recommendations.</li>
               </ul>
               <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="tag">Generative AI (GPT)</span><span class="tag">NLP</span><span class="tag">Flask</span>
+                <span class="tag">Generative AI</span><span class="tag">NLP</span>
               </div>
             </div>
           </div>
 
+          <!-- Project 4 -->
+          <div class="col-md-6">
+            <div class="p-3 h-100 border rounded-3" style="border-color: var(--border); background: var(--card)">
+              <h3 class="h5">Data Visualization & Analytics Dashboards</h3>
+              <h4 class="h6 mt-3">IPL Analysis</h4>
+              <p class="mb-2">Interactive Power BI dashboard analyzing IPL history from <strong>2008–2025</strong>, with DAX and data modeling for team/player statistics and seasonal trends.</p>
+              <h4 class="h6 mt-3">Sales Dashboard</h4>
+              <p class="mb-0">Dynamic Excel dashboard using Pivot Tables, Slicers, and Dynamic Charts for business performance tracking.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="container container-narrow mb-4">
+      <div class="cardx p-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+          <h2 class="section-title h3 mb-2">Resume</h2>
+          <p class="muted mb-0">Download an ATS-friendly text copy or save the resume as a PDF.</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="resume.txt" download>Download Resume</a>
+          <button class="btn btn-ghost" type="button" onclick="window.print()">Save as PDF</button>
         </div>
       </div>
     </section>
@@ -304,16 +357,35 @@
     <section id="experience" class="container container-narrow mb-4">
       <div class="cardx p-4">
         <h2 class="section-title h3 mb-3">Experience</h2>
-        <div class="d-flex justify-content-between flex-wrap">
-          <div>
-            <h3 class="h6 mb-1">Data Science Intern — Anyatam Adhyayan Education Services Pvt. Ltd</h3>
-            <div class="muted">Mar 2025 – Aug 2025</div>
-          </div>
+        <div class="mb-4">
+          <h3 class="h5 mb-1">MIS Executive — USDC Technologies Pvt. Ltd.</h3>
+          <div class="muted">Pune · Sept 2026 – Present</div>
+          <ul class="mt-2 mb-0">
+            <li class="tick">Prepare daily MIS reports and interactive dashboards for key business KPIs.</li>
+            <li class="tick">Optimize data analysis and routine reporting using Excel, Power BI, and SQL.</li>
+            <li class="tick">Maintain data accuracy and provide actionable insights for management decisions.</li>
+          </ul>
         </div>
-        <ul class="mt-2 mb-0">
-          <li class="tick">Analyzed real datasets using <strong>Pandas</strong> & <strong>Matplotlib</strong>; improved model interpretability by <strong>25%</strong>.</li>
-          <li class="tick">Cleaned & prepared data pipelines; reduced data errors by ~<strong>30%</strong>.</li>
-        </ul>
+        <div class="mb-4">
+          <h3 class="h5 mb-1">Data Science and Analysis Intern — SetTribe LLP. Pvt. Ltd.</h3>
+          <div class="muted">Pune · Nov 2025 – Sept 2026</div>
+          <ul class="mt-2 mb-0">
+            <li class="tick">Built a face recognition system using OpenCV and CNN, achieving <strong>96% face verification accuracy</strong> on a custom dataset.</li>
+            <li class="tick">Developed a RAG chatbot with LangChain, FAISS, OpenAI Embeddings, and LLMs, reducing manual document search time by <strong>40%</strong>.</li>
+            <li class="tick">Created AI chatbots using LLMs, NLP, LangChain, and vector databases, automating <strong>60%</strong> of routine user queries.</li>
+            <li class="tick">Performed EDA on <strong>50,000+</strong> records using Python, NumPy, Matplotlib, and Seaborn.</li>
+            <li class="tick">Built interactive Power BI, DAX, Excel, and live MySQL dashboards, saving <strong>15+ hours per week</strong>.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="h5 mb-1">Data Science Intern — Anyatam Adhyayan Education Services Pvt. Ltd.</h3>
+          <div class="muted">Pune · Dec 2024 – Jun 2025</div>
+          <ul class="mt-2 mb-0">
+            <li class="tick">Analyzed complex real-world datasets using Pandas and Matplotlib, improving model interpretability by <strong>25%</strong>.</li>
+            <li class="tick">Cleaned, pre-processed, and structured data, reducing data errors by <strong>30%</strong>.</li>
+            <li class="tick">Performed EDA using Python, NumPy, Matplotlib, and Seaborn.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -324,8 +396,8 @@
         <div class="row g-3">
           <div class="col-md-6">
             <h3 class="h6 mb-1">B.Tech in Artificial Intelligence & Data Science</h3>
-            <div class="muted">TERNA College of Engineering, Dharashiv (Dr. Babasaheb Ambedkar Technological University) — 2022–2025</div>
-            <div>CGPA: 7.89</div>
+            <div class="muted">TERNA College of Engineering, Dharashiv (Dr. Babasaheb Ambedkar Technological University, Lonere) — 2022–2025</div>
+            <div>CGPA: 7.52</div>
           </div>
           <div class="col-md-6">
             <h3 class="h6 mb-1">Diploma in Mechanical Engineering</h3>
@@ -346,8 +418,8 @@
       <div class="cardx p-4">
         <h2 class="section-title h3 mb-3">Certificates</h2>
         <ul class="mb-0">
-          <li><strong>Data Analysis with Python</strong> — IBM Cognitive Class, Jun 2025.</li>
-          <li><strong>Cisco CCNAv7</strong> — May 2024.</li>
+          <li><strong>Data Analysis with Python</strong> — Cognitive Class, June 2025.</li>
+          <li><strong>Cisco CCNA v7 Certification</strong> — May 2024.</li>
         </ul>
       </div>
     </section>
@@ -358,8 +430,8 @@
         <h2 class="section-title h3 mb-3">Contact</h2>
         <div class="d-flex flex-wrap align-items-center gap-2">
           <a class="btn btn-primary" href="mailto:ccdeshmukh28@gmail.com">Email Me</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/chinmay-deshmukh-7a2633264/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn btn-ghost" href="https://github.com/chinmay2203" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/chinmay-deshmukh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/chinmay2203" target="_blank" rel="noopener noreferrer">GitHub</a>
           <button id="copyEmail" class="btn btn-ghost" type="button"><span class="me-1">Copy</span><kbd class="kbd">Email</kbd></button>
         </div>
       </div>
@@ -368,54 +440,70 @@
     <!-- ATS Plain Text (toggle) -->
     <section class="container container-narrow">
       <div class="resume-plain" id="plain">
-Chinmay C Deshmukh | Data Science / Machine Learning | Parbhani, India | +91 77560 52203 | ccdeshmukh28@gmail.com
-LinkedIn: https://www.linkedin.com/in/chinmay-deshmukh-7a2633264/ | GitHub: https://github.com/chinmay2203
+Chinmay Deshmukh | Pune, India | +91 7756052203 | ccdeshmukh28@gmail.com
+LinkedIn: https://linkedin.com/in/chinmay-deshmukh | GitHub: https://github.com/chinmay2203
 
 SUMMARY
-Motivated and adaptable fresher with strong core programming skills. Seeking a Data Science/ML role. Good communicator and team player. Skilled in Python, SQL, EDA, feature engineering, modeling, and visualization.
+Motivated and adaptable fresher with strong programming skills in Python, SQL, and Data Science libraries. Passionate about learning and growth, with proven ability to analyze datasets, build ML models, and create data-driven insights. A quick learner, effective communicator, and team player seeking opportunities to apply technical expertise in real-world projects.
 
 SKILLS
-Languages: Python; SQL (MySQL); HTML; CSS; JavaScript
-Libraries: NumPy; Pandas; Matplotlib; Seaborn; scikit-learn; Flask; Plotly
-Tools: Jupyter Notebook; VS Code; Excel; Git & GitHub
-ML/AI: EDA; feature engineering; missing values; outlier handling; normalization; encoding; regression (Linear, Random Forest); classification (Logistic Regression); NLP; content-based recommendation; Generative AI (GPT)
+Programming: Python; SQL
+AI/ML Libraries: NumPy; Pandas; Matplotlib; Seaborn; Scikit-learn
+Deep Learning & Computer Vision: TensorFlow; CNN; OpenCV
+Generative AI & NLP: NLP; LLMs; Generative AI; RAG; LangChain; FAISS; OpenAI Embeddings; Vector Databases
+Frameworks: Flask; Django
+Databases: MySQL
+Developer Tools: Git; GitHub; Jupyter Notebook; VS Code; PyCharm
 
 PROJECTS
-House Price Prediction (https://ccdeshmukh28.pythonanywhere.com/)
-• 50,000+ records processed; identified key price drivers (location, size, amenities)
-• Regression models achieving 90%+ accuracy
-• Visualizations using Matplotlib & Seaborn
+House Price Prediction Using Machine Learning (https://ccdeshmukh28.pythonanywhere.com/)
+• Processed 50,000+ property records for regression models with 90% prediction accuracy.
+• Visualized market pricing trends and correlations using Matplotlib and Seaborn.
 
-Diabetes Risk Analysis (https://cdeshmukh806.pythonanywhere.com/)
-• 5,000+ patient records analyzed; key risk factors: glucose, BMI, age
-• Early detection strategies improved by 18%
-• Visualizations for risk distribution & trends
+Diabetes Risk Analysis Using Machine Learning (https://cdeshmukh806.pythonanywhere.com/)
+• Analyzed 5,000+ patient health records to identify risk factors and patterns.
+• Built predictive models improving early diabetes detection by 18%.
 
-Career Roadmap Generation (https://chinmaydeshmukh619.pythonanywhere.com/)
-• GenAI system to create multi‑year career plans
-• NLP & content‑based recommendation with market trend signals
-• Visualizations with Matplotlib & Plotly
+Career Roadmap Generation Using GenAI (https://chinmaydeshmukh619.pythonanywhere.com/)
+• Built an AI-powered recommendation system using Generative AI and NLP for personalized career plans.
+
+Data Visualization & Analytics Dashboards
+• IPL Analysis: Interactive Power BI dashboard covering historical IPL data (2008–2025), using DAX and data modeling for team/player statistics and seasonal trends.
+• Sales Dashboard: Dynamic Excel dashboard using Pivot Tables, Slicers, and Dynamic Charts for business performance tracking.
 
 EXPERIENCE
-Data Science Intern — Anyatam Adhyayan Education Services Pvt. Ltd (Mar 2025 – Aug 2025)
-• Improved model interpretability by 25% using Pandas & Matplotlib
-• Reduced data errors by ~30% through robust cleaning & prep
+MIS Executive — USDC Technologies Pvt. Ltd., Pune (Sept 2026 – Present)
+• Prepare daily MIS reports and interactive dashboards for key business KPIs.
+• Optimize data analysis and routine reporting using Excel, Power BI, and SQL.
+• Maintain data accuracy and provide actionable insights for management decisions.
+
+Data Science and Analysis Intern — SetTribe LLP. Pvt. Ltd., Pune (Nov 2025 – Sept 2026)
+• Built a face recognition system using OpenCV and CNN with 96% face verification accuracy on a custom dataset.
+• Developed a RAG chatbot using LangChain, FAISS, OpenAI Embeddings, and LLMs, reducing manual document search time by 40%.
+• Created AI chatbots using LLMs, NLP, LangChain, and vector databases, automating 60% of routine user queries.
+• Performed EDA on 50,000+ records using Python, NumPy, Matplotlib, and Seaborn.
+• Built interactive Power BI, DAX, Excel, and live MySQL dashboards, saving 15+ hours per week.
+
+Data Science Intern — Anyatam Adhyayan Education Services Pvt. Ltd., Pune (Dec 2024 – Jun 2025)
+• Analyzed complex real-world datasets using Pandas and Matplotlib, improving model interpretability by 25%.
+• Cleaned, pre-processed, and structured data, reducing data errors by 30%.
+• Performed EDA using Python, NumPy, Matplotlib, and Seaborn.
 
 EDUCATION
-B.Tech in Artificial Intelligence & Data Science — TERNA College of Engineering, Dharashiv (DBATU), 2022–2025 | CGPA: 7.89
-Diploma in Mechanical Engineering — Government Polytechnic Jintur (MSBTE), 2019–2022 | 75%
-SSC (10th) — Bhartiya Bal Vidya Mandir, Parbhani (Aurangabad), 2018 | 74.80%
+B.Tech in Artificial Intelligence and Data Science — TERNA College of Engineering (Dr. Babasaheb Ambedkar Technological University, Lonere), Dharashiv | 2022–2025 | CGPA: 7.52
+Diploma in Mechanical Engineering — Government Polytechnic Jintur (MSBTE) | 2019–2022 | 75%
+SSC / 10th — Bhartiya Bal Vidya Mandir, Parbhani (Aurangabad) | 2018 | 74.80%
 
 CERTIFICATES
-• Data Analysis with Python — IBM Cognitive Class (Jun 2025)
-• Cisco CCNAv7 — May 2024
+• Data Analysis with Python — Cognitive Class (June 2025)
+• Cisco CCNA v7 Certification — May 2024
       </div>
     </section>
   </main>
 
   <footer class="py-4">
     <div class="container container-narrow d-flex flex-wrap justify-content-between align-items-center">
-      <small class="muted">© <span id="year"></span> Chinmay C Deshmukh. All rights reserved.</small>
+      <small class="muted">© <span id="year"></span> Chinmay Deshmukh. All rights reserved.</small>
       <div class="d-flex gap-2">
         <a href="#top" class="pill">Back to top ↑</a>
       </div>
@@ -459,7 +547,8 @@ CERTIFICATES
     });
 
     // Avatar upload (placeholder -> upload to background-image)
-    document.getElementById('avatar22').addEventListener('click', () => {
+    const avatarUpload = document.getElementById('avatar22');
+    if (avatarUpload) avatarUpload.addEventListener('click', () => {
       const input = document.createElement('input');
       input.type = 'file';
       input.accept = 'image/*';
